@@ -26,6 +26,14 @@ public class GiveRewardController {
     private AsynCmdServer asynCmdServer;
 
 
+    /**
+     * http://localhost:8080/asyn/givereward?integral=11&gold=11&actId=1&userId=1000
+     * @param integral
+     * @param gold
+     * @param actId
+     * @param userId
+     * @return
+     */
     @RequestMapping(value = "/givereward")
     public String sendsms(Integer integral,Integer gold,String actId,String userId) {
         GiveRewardBiz smsBiz = new GiveRewardBiz();

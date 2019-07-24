@@ -29,15 +29,22 @@ public class SmsController {
     private AsynCmdServer asynCmdServer;
 
 
+    /**
+     * http://localhost:8080/asyn/sendsms?mobiles=130120122,123121331&content=1111&requestId=123123123
+     * @param mobiles
+     * @param content
+     * @param requestId
+     * @return
+     */
     @RequestMapping(value = "/sendsms")
-    public String sendsms(List<String> mobiles, String content, String requestId) {
+    public String sendsms(String mobiles, String content, String requestId) {
         //效验手机号
         //效验手机内容
         SmsBiz smsBiz = new SmsBiz();
         smsBiz.setContent(content);
-        smsBiz.setMobile(mobiles);
+        smsBiz.setMobiles(mobiles);
         //唯一业务id 全局唯一
-        String bizId = "sms" + JSON.toJSONString(mobiles) + requestId;
+        String bizId = "sms" + mobiles + requestId;
         asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class);
         return "ok";
     }

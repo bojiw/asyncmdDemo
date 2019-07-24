@@ -39,11 +39,11 @@ public class SendCouponExecuter extends AbstractAsynExecuter<SendCouponAsynCmd> 
         System.out.println("赠送优惠券成功");
         System.out.println("根据用户id获取手机号" + JSON.toJSONString(content.getUserIds()));
         //模拟逻辑 获取到手机号
-        List<String> mobils = Lists.newArrayList();
+        String mobils = "133212131,12312222";
         SmsBiz smsBiz = new SmsBiz();
-        smsBiz.setMobile(mobils);
+        smsBiz.setMobiles(mobils);
         smsBiz.setContent("恭喜你成功收到优惠券");
-        String bizId = "sms" + JSON.toJSONString(mobils) + cmd.getBizId();
+        String bizId = "sms" + mobils + cmd.getBizId();
         asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class);
 
     }

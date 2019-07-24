@@ -17,18 +17,18 @@ public class SmsBiz extends AsynBizObject {
     /**
      * 手机号
      */
-    private List<String> mobile;
+    private String mobiles;
     /**
      * 短信内容
      */
     private String content;
 
-    public List<String> getMobile() {
-        return mobile;
+    public String getMobiles() {
+        return mobiles;
     }
 
-    public void setMobile(List<String> mobile) {
-        this.mobile = mobile;
+    public void setMobiles(String mobiles) {
+        this.mobiles = mobiles;
     }
 
     public String getContent() {
