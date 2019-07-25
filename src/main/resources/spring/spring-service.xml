@@ -75,5 +75,14 @@
         <!-- 备份定时任务相关配置 end-->
     </bean>
 
+    <!-- 如果一个异步命令对象有多个异步命令执行器 则取最大执行器的配置 -->
+    <bean id="smsExecuter" class="com.asyncmdDemo.asyn.asynexecuter.SmsExecuter">
+        <!--调度方式 默认为异步调度 对应的调度枚举类DispatchMode-->
+        <property name="dispatchMode" value="DISPATCH"/>
+        <!-- 重试频率 -->
+        <property name="executerFrequencys" value="5s,10,1h"/>
+        <!-- 排序值 越大越早执行  -->
+        <property name="sort" value="110"/>
+    </bean>
 
 </beans>

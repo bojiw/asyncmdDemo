@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class GiveRewardPushExecuter extends AbstractAsynExecuter<GiveRewardAsynCmd> {
 
+
     /**
      * 只有赠送成功才会进行通知 所以设置push通知处理器最后一个执行
      * @return
