@@ -57,7 +57,7 @@
         <property name="cron" value="0/2 * * * * ?"/>
         <!--异步命令是否要先进后出 默认先进先出 true代表后进先出 注意这个只针对一张表的情况 -->
         <property name="desc" value="true"/>
-        <!--一次从一张表中捞取命令数量 默认30条数据 10代表捞取10条数据 -->
+        <!--一次从一张表中捞取命令数量 默认20条数据 10代表捞取10条数据 -->
         <property name="limit" value="10"/>
         <!--重试次数 默认重试12次 20代表重试20次-->
         <property name="retryNum" value="20"/>
