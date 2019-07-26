@@ -43,6 +43,15 @@
         -->
         <property name="tableNum" value="4"/>
         <!--非必填项-->
+        <!--执行线程池配置 根据自己应用来配置 start-->
+        <!--最大线程数 默认150-->
+        <property name="maxPoolSize" value="200"/>
+        <!--缓存队列长度 默认300-->
+        <property name="queueCapacity" value="400"/>
+        <!--最小线程池 默认10-->
+        <property name="corePoolSize" value="20"/>
+        <!--执行线程池配置 end-->
+
         <!-- 调度中心调度执行相关配置 start -->
         <!-- 从数据库捞取未执行的异步命令多久捞取一次 默认是3秒捞取一次  0/2 * * * * ?代表2秒捞取一次-->
         <property name="cron" value="0/2 * * * * ?"/>
@@ -80,7 +89,7 @@
         <!--调度方式 默认为异步调度 对应的调度枚举类DispatchMode-->
         <property name="dispatchMode" value="DISPATCH"/>
         <!-- 重试频率 -->
-        <property name="executerFrequencys" value="5s,10,1h"/>
+        <property name="executerFrequencys" value="5s,10s,1h"/>
         <!-- 排序值 越大越早执行  -->
         <property name="sort" value="110"/>
     </bean>
