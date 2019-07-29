@@ -12,6 +12,7 @@ import com.asyncmdDemo.asyn.asyncmd.SmsAsynCmd;
  */
 public class SmsExecuter extends AbstractAsynExecuter<SmsAsynCmd> {
 
+
     @Override
     protected void executer(SmsAsynCmd cmd) {
         SmsBiz content = cmd.getContent();
