@@ -1,19 +1,12 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+
 package com.asyncmdDemo.web;
 
-import com.alibaba.fastjson.JSON;
-import com.asyncmd.manager.AsynExecuterFacade;
 import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
 import com.asyncmdDemo.asyn.asyncmd.SmsAsynCmd;
 import com.asyncmdDemo.server.AsynCmdServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.List;
 
 /**
  * 发送短信接口

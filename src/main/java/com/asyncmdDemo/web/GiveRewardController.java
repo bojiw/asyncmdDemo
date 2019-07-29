@@ -1,10 +1,6 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+
 package com.asyncmdDemo.web;
 
-import com.asyncmd.manager.AsynExecuterFacade;
 import com.asyncmdDemo.asyn.asynbiz.GiveRewardBiz;
 import com.asyncmdDemo.asyn.asyncmd.GiveRewardAsynCmd;
 import com.asyncmdDemo.server.AsynCmdServer;

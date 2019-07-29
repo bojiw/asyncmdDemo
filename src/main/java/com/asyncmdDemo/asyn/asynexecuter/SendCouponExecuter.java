@@ -1,7 +1,4 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2019 All Rights Reserved.
- */
+
 package com.asyncmdDemo.asyn.asynexecuter;
 
 import com.alibaba.fastjson.JSON;
@@ -12,11 +9,8 @@ import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
 import com.asyncmdDemo.asyn.asyncmd.SendCouponAsynCmd;
 import com.asyncmdDemo.asyn.asyncmd.SmsAsynCmd;
 import com.asyncmdDemo.server.AsynCmdServer;
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author wangwendi
