@@ -7,6 +7,7 @@ import com.asyncmdDemo.server.AsynCmdServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 赠送奖励
@@ -31,6 +32,7 @@ public class GiveRewardController {
      * @return
      */
     @RequestMapping(value = "/givereward")
+    @ResponseBody
     public String sendsms(Integer integral,Integer gold,String actId,String userId) {
         GiveRewardBiz smsBiz = new GiveRewardBiz();
         smsBiz.setGold(gold);

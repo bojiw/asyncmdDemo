@@ -11,6 +11,7 @@ import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
  */
 public class SmsAsynCmd extends AsynCmd<SmsBiz> {
 
+    public static final String name = "sms";
     @Override
     protected Class getObject() {
         return SmsBiz.class;

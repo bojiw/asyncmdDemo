@@ -16,6 +16,11 @@ public class SmsExecuter extends AbstractAsynExecuter<SmsAsynCmd> {
     protected void executer(SmsAsynCmd cmd) {
         SmsBiz content = cmd.getContent();
         System.out.println("发送短信");
+        try {
+            Thread.sleep(1000L);
+        }catch (Exception e){
+
+        }
         System.out.println("短信手机号" + content.getMobiles());
     }
 }
