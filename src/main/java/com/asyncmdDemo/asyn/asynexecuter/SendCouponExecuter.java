@@ -1,8 +1,6 @@
 
 package com.asyncmdDemo.asyn.asynexecuter;
 
-import com.alibaba.fastjson.JSON;
-import com.asyncmd.enums.DispatchMode;
 import com.asyncmd.model.AbstractAsynExecuter;
 import com.asyncmdDemo.asyn.asynbiz.SendCouponBiz;
 import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
@@ -26,8 +24,8 @@ public class SendCouponExecuter extends AbstractAsynExecuter<SendCouponAsynCmd> 
     protected void executer(SendCouponAsynCmd cmd) {
         SendCouponBiz content = cmd.getContent();
         System.out.println("赠送优惠券成功");
-        System.out.println("根据用户id获取手机号" + JSON.toJSONString(content.getUserIds()));
         //模拟逻辑 获取到手机号
+
         String mobils = "133212131,12312222";
         SmsBiz smsBiz = new SmsBiz();
         smsBiz.setMobiles(mobils);
