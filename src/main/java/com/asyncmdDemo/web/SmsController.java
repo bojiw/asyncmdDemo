@@ -34,7 +34,6 @@ public class SmsController {
      * http://localhost:8080/asyn/sendsms?mobiles=130120122,123121331&content=1111&requestId=123123123
      * @param mobiles
      * @param content
-     * @param requestId
      * @return
      */
     @RequestMapping(value = "/sendsms")

@@ -19,11 +19,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class SendCouponExecuter extends AbstractAsynExecuter<SendCouponAsynCmd> {
 
-    @Override
-    public DispatchMode getDispatchMode() {
-        //因为是指定发送时间来发送 需要设置调度方式为调度中心调度 不然默认是立刻进行赠券
-        return DispatchMode.DISPATCH;
-    }
 
     @Autowired
     private AsynCmdServer asynCmdServer;
