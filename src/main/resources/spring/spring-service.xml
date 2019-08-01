@@ -24,6 +24,8 @@
         <!--必填项-->
         <!--定时任务名称 重点：需要不同工程不一样 推荐用应用名称来命名 如果多个项目定义的相同 定时任务会有问题-->
         <property name="jobName" value="demo-asyn"/>
+        <!-- 所在环境 会保证到表中 这样就可以解决预发环境的命令只会在预发环境上执行 做到不同环境之间哪怕用的数据库一样 也可以隔离 -->
+        <property name="env" value="dev"/>
         <!--zookeeper地址-->
         <property name="zookeeperUrl" value="127.0.0.1:2181"/>
         <!--数据源 -->
@@ -35,7 +37,7 @@
              * 代表第一次重试5秒以后执行 第二次10秒以后执行 第三次20秒以后执行
              * 这个参数如果想不同异步命令频率不一样 可以在异步命令执行器也有参数可以设置
         -->
-        <property name="executerFrequencys" value="10s,10s,1m"/>
+        <property name="executerFrequencys" value="4s,5s,6s"/>
         <!--分表数量 正式环境一定要填写 设置需要是2的倍数如 4 8 16 32 64 因为分表位计算是通过biz_id 然后和hashmap相同的计算下标的方式 & hash
             4代表分了4张异步命令表
             也代表有4个线程同时捞取4张异步命令表的数据进行执行 测试环境可以不填写
@@ -82,6 +84,9 @@
         <!--配置备份任务一次最多每张表处理多少条数据 默认是10w条数据 10代表处理1w条数据-->
         <property name="maxNo" value="10"/>
         <!-- 备份定时任务相关配置 end-->
+
+        <!--设置全局异常回调 每次异步命令执行异常都会回调里面都方法-->
+        <property name="errorCallBack" ref="asynCmdErrorCallBack"/>
     </bean>
 
 </beans>

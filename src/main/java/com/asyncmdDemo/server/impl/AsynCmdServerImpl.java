@@ -28,7 +28,7 @@ public class AsynCmdServerImpl implements AsynCmdServer {
             asynExecuterFacade.saveExecuterAsynCmd(asynCmd);
 
         }catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
 
     }
