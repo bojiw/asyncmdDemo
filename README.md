@@ -14,5 +14,6 @@
 com.asyncmdDemo.asyn.asynbiz 存放异步命令业务对象
 com.asyncmdDemo.asyn.asyncmd 存放异步命令对象
 com.asyncmdDemo.asyn.asynexecuter 存放异步命令执行器
+com.asyncmdDemo.asyn.callback 执行器执行异常回调
 
 SmsAsynCmd异步命令对象里设置里一些异步命令个性化的设置
