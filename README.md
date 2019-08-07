@@ -270,6 +270,8 @@ asynCmdDB(异步命令对象)
 | createName  | 创建异步命令的人 默认system   |
 | successExecuters  | 执行成功的异步命令执行器类名 如果一个异步命令对象对应多个异步命令执行器 通过这个可以看有成功执行的异步命令对象   |
 | env  | 所在环境  |
+| exception  | 异步命令执行时的异常信息  |
+| rely_biz_id  | 依赖的异步命令业务id  |
 | gmtCreate  | 创建时间  |
 | gmtModify  | 修改时间  |
 
