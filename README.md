@@ -149,7 +149,8 @@ public class SmsExecuter extends AbstractAsynExecuter<SmsAsynCmd> {
 - 为了保证可靠性 当出现极端情况下 比如执行器执行成功了 修改命令状态时系统挂了 会出现重复执行的情况 所以执行器需要保证幂等
 - 如果应用系统已经使用了quartz 需要版本为2.1.7以上
 
-
+## 分表情况根据业务id查询保存在哪张表
+调用SubTableUtil#getIndex(分表数量,bizId) 可以获取异步命令在哪张表中 方便排查问题
 
 ## 详细配置项
 有两个地方可以配置 一个为全局配置项AsynGroupConfig 一个为设置个性化配置项AbstractAsynExecuter
