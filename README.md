@@ -28,7 +28,7 @@ SmsAsynCmd异步命令对象里设置里一些异步命令个性化的设置
       <dependency>
           <groupId>com.bojiw</groupId>
           <artifactId>asyncmd-core</artifactId>
-          <version>1.7</version>
+          <version>1.8</version>
       </dependency>
 ```
 2、在spring的xml文件中 引入xml文件
