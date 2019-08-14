@@ -16,5 +16,5 @@ public interface AsynCmdServer {
      * @param bizId
      * @param asynCmdClass
      */
-    void notify(AsynBizObject asynBizObject,String bizId,Class<? extends AsynCmd> asynCmdClass);
+    void notify(AsynBizObject asynBizObject,String bizId,Class<? extends AsynCmd> asynCmdClass,String relyBizId);
 }

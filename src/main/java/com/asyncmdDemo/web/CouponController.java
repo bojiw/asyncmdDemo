@@ -44,7 +44,7 @@ public class CouponController {
         String bizId = SendCouponAsynCmd.type + requestId;
         sendCouponAsynCmd.setBizId(bizId);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-ddHH:mm:ss");
-        //设置发送时间 需要在SendCouponExecuter设置调度方式为调度中心调度 不然会立刻发送
+        //设置发送时间 需要在SendCouponAsynCmd设置调度方式为调度中心调度 不然会立刻发送
         try {
             sendCouponAsynCmd.setNextTime(format.parse(sendDate));
 

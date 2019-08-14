@@ -1,6 +1,7 @@
 
 package com.asyncmdDemo.asyn.asynexecuter;
 
+import com.asyncmd.exception.AsynException;
 import com.asyncmd.model.AbstractAsynExecuter;
 import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
 import com.asyncmdDemo.asyn.asyncmd.SmsAsynCmd;
@@ -24,6 +25,7 @@ public class SmsExecuter extends AbstractAsynExecuter<SmsAsynCmd> {
         }catch (Exception e){
 
         }
-        System.out.println("短信手机号" + content.getMobiles());
+        throw new RuntimeException("发送短信异常");
     }
+
 }

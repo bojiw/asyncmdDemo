@@ -1,17 +1,12 @@
 
 package com.asyncmdDemo.web;
 
-import com.asyncmd.utils.JdbcTemplateUtil;
 import com.asyncmd.utils.SnowflakeIdWorkerUtil;
-import com.asyncmd.utils.TransactionTemplateUtil;
 import com.asyncmdDemo.asyn.asynbiz.SmsBiz;
 import com.asyncmdDemo.asyn.asyncmd.SmsAsynCmd;
 import com.asyncmdDemo.server.AsynCmdServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.TransactionCallbackWithoutResult;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -48,7 +43,7 @@ public class SmsController {
         SnowflakeIdWorkerUtil snowflakeIdWorkerUtil = new SnowflakeIdWorkerUtil(0,0);
 
         String bizId = SmsAsynCmd.name + mobiles + snowflakeIdWorkerUtil.nextId();
-        asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class);
+        asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class,null);
 
         return "ok";
     }

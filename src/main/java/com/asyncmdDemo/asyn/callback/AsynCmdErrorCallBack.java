@@ -1,7 +1,7 @@
 
 package com.asyncmdDemo.asyn.callback;
 
-import com.asyncmd.callback.ErrorCallBack;
+import com.asyncmd.callback.AbstractErrorCallBack;
 import com.asyncmd.model.AsynCmd;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @version $Id: AsynCmdErrorCallBack.java, v 0.1 2019年08月01日 下午7:29 wangwendi Exp $
  */
 @Service("asynCmdErrorCallBack")
-public class AsynCmdErrorCallBack implements ErrorCallBack {
+public class AsynCmdErrorCallBack extends AbstractErrorCallBack {
     /**
      * 每次执行异常都会回调
      * @param asynCmd

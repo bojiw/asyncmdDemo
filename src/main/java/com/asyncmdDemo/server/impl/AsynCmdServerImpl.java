@@ -20,11 +20,12 @@ public class AsynCmdServerImpl implements AsynCmdServer {
 
 
     @Override
-    public void notify(AsynBizObject asynBizObject,String bizId,Class<? extends AsynCmd> asynCmdClass) {
+    public void notify(AsynBizObject asynBizObject,String bizId,Class<? extends AsynCmd> asynCmdClass,String relyBizId) {
         try {
             AsynCmd asynCmd = asynCmdClass.newInstance();
             asynCmd.setContent(asynBizObject);
             asynCmd.setBizId(bizId);
+            asynCmd.setRelyBizId(relyBizId);
             asynExecuterFacade.saveExecuterAsynCmd(asynCmd);
 
         }catch (Exception e){

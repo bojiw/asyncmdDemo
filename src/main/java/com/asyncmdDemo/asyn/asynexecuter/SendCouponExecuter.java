@@ -31,7 +31,7 @@ public class SendCouponExecuter extends AbstractAsynExecuter<SendCouponAsynCmd> 
         smsBiz.setMobiles(mobils);
         smsBiz.setContent("恭喜你成功收到优惠券");
         String bizId = "sms" + mobils + cmd.getBizId();
-        asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class);
+        asynCmdServer.notify(smsBiz,bizId,SmsAsynCmd.class,null);
 
     }
 }

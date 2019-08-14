@@ -1,6 +1,7 @@
 
 package com.asyncmdDemo.web;
 
+import com.asyncmd.utils.SubTableUtil;
 import com.asyncmdDemo.asyn.asynbiz.GiveRewardBiz;
 import com.asyncmdDemo.asyn.asyncmd.GiveRewardAsynCmd;
 import com.asyncmdDemo.server.AsynCmdServer;
@@ -38,8 +39,9 @@ public class GiveRewardController {
         smsBiz.setGold(gold);
         smsBiz.setIntegral(integral);
         //唯一业务id 根据业务来定义 需要全局唯一
-        String bizId = "give" + userId + actId + System.currentTimeMillis();
-        asynCmdServer.notify(smsBiz,bizId,GiveRewardAsynCmd.class);
+        String bizId = "give" + userId + actId;
+        asynCmdServer.notify(smsBiz,bizId,GiveRewardAsynCmd.class,null);
+
         return "ok";
     }
 
